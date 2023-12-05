@@ -1,0 +1,5 @@
+<TargetEndpoint name="backend">
+  <HTTPTargetConnection>
+    <URL>replaced_by_config_json</URL>
+  </HTTPTargetConnection>
+</TargetEndpoint>

@@ -34,12 +34,13 @@
                       "newrelic.latency.ms": {firstnonnull(dt.nr.latency,'0')},
                       "request.verb": "{request.verb}",
                       "request.uri": "{escapeJSON(request.uri)}",
-                      "request.url": "{escapeJSON(request.url)}",
+                      <!-- "request.url": "{escapeJSON(request.url)}", -->
                       "response.content": "{escapeJSON(response.content)}",
                       "response.status.code": "{response.status.code}",
                       "service.name": "{apiproxy.name}",
                       "target.sent.start.timestamp": "{target.sent.start.timestamp}",
                       "target.received.end.timestamp": "{target.received.end.timestamp}",
+                      "target.url": "{escapeJSON(target.url)}",
                       "trace.id": "{firstnonnull(dt.trace.id,'')}"
                     }]
                   }

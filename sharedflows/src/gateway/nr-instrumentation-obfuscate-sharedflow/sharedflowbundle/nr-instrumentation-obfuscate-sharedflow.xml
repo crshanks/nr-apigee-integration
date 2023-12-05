@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="1" name="nr-instrumentation-obfuscate-sharedflow">
+  <DisplayName>nr-instrumentation-obfuscate-sharedflow</DisplayName>
+  <Description>Shared flow to prepare New Relic Trace API distributed tracing and Metric API metrics</Description>  
+  <Policies>
+    <Policy>JS-NRInstrumentationObfuscate</Policy>
+  </Policies>
+  <Resources>
+    <Resource>jsc://JS-NRInstrumentationObfuscate.js</Resource>
+  </Resources>
+  <SharedFlows>
+    <SharedFlow>default</SharedFlow>
+  </SharedFlows>
+</SharedFlowBundle>

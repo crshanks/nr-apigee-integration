@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="true" enabled="true" timeLimit="200" name="JS-NRInstrumentationObfuscate">
+    <DisplayName>JS-NRInstrumentationObfuscate</DisplayName>
+    <Properties>
+        <!--
+            Tracer sampler configuration:
+                - always_on - Sampler that always samples spans, regardless of the parent span’s sampling decision.
+                - always_off - Sampler that never samples spans, regardless of the parent span’s sampling decision.
+                - traceidratio - Sampler that samples probabalistically based on rate.
+                - parentbased_always_on - (default) Sampler that respects its parent span’s sampling decision, but otherwise always samples.
+                - parentbased_always_off - Sampler that respects its parent span’s sampling decision, but otherwise never samples.
+                - parentbased_traceidratio - Sampler that respects its parent span’s sampling decision, but otherwise samples probabalistically based on rate.
+        -->
+        <Property name='tracesSampler'>replaced_by_config_json</Property>
+        <!--
+            Sampling probability can be set with tracesSamplerArg if the sampler is traceidratio or parentbased_traceidratio.
+            Rate must be in the range [0.0,1.0]. When not provided rate will be set to 1.0 (maximum rate possible).
+        -->
+        <Property name='tracesSamplerArg'>replaced_by_config_json</Property>
+    </Properties>
+    <ResourceURL>jsc://NRInstrumentationObfuscate.js</ResourceURL>
+</Javascript>

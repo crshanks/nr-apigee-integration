@@ -1,0 +1,30 @@
+{
+  "configurations": [
+      {
+          "name": "test",
+          "policies": [],
+          "proxies": [
+              {
+                  "name": "default.xml",
+                  "tokens": [
+                      {
+                          "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                          "value": "/newrelic/trace-and-metric-and-log-obfuscate"
+                      }
+                  ]
+              }
+          ],
+          "targets": [
+              {
+                  "name": "backend.xml",
+                  "tokens": [
+                      {
+                          "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
+                          "value": "https://swapi.dev/api/people/1/?format=json"
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+}

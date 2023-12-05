@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout continueOnError="true" enabled="true" name="FC-NRMetricAPI">
+  <DisplayName>FC-NRMetricAPI</DisplayName>
+  <Parameters/>
+  <SharedFlowBundle>nr-metric-api-sharedflow</SharedFlowBundle>
+</FlowCallout>
