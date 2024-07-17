@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<SharedFlow name="default">
-  <Step>
-    <Name>ML-NRLogging</Name>
-    <Condition>apiproxy.name != "loggerproxy"</Condition> <!-- This condition is important to avoid infinite loop -->
-  </Step>
-</SharedFlow>
