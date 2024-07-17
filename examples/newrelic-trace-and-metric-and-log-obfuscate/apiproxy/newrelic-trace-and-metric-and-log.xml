@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="newrelic-trace-and-metric-and-log-obfuscate">
+  <DisplayName/>
+  <Description/>
+  <Policies/>
+  <ProxyEndpoints>
+    <ProxyEndpoint>default</ProxyEndpoint>
+  </ProxyEndpoints>
+  <Resources/>
+  <TargetEndpoints>
+    <TargetEndpoint>backend</TargetEndpoint>
+  </TargetEndpoints>
+</APIProxy>

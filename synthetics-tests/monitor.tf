@@ -96,6 +96,22 @@ resource "newrelic_synthetics_script_monitor" "newrelic_trace_and_metric_and_log
   }
 }
 
+resource "newrelic_synthetics_script_monitor" "newrelic_trace_and_metric_and_log_obfuscate_monitor" {
+  name                 = "newrelic-trace-and-metric-and-log-obfuscate"
+  type                 = "SCRIPT_API"
+  locations_public     = ["EU_WEST_2"]
+  period               = "EVERY_15_MINUTES"
+  status               = "ENABLED"
+  script               = templatefile("./script.tftpl", { ENDPOINT = "/newrelic/trace-and-metric-and-log-obfuscate", APIGEE_PROTOCOL = var.apigee_protocol, APIGEE_HOST = var.apigee_host, REGION = var.new_relic_region })
+  script_language      = "JAVASCRIPT"
+  runtime_type         = "NODE_API"
+  runtime_type_version = "16.10"
+  tag {
+    key = "terraform"
+    values = [true]
+  }
+}
+
 resource "newrelic_synthetics_script_monitor" "newrelic_trace_and_logging_monitor" {
   name                 = "newrelic-trace-and-logging"
   type                 = "SCRIPT_API"

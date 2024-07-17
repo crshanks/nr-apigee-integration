@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+  <PreFlow name="PreFlow">
+    <Request/>
+    <Response/>
+  </PreFlow>
+  <Flows/>
+  <PostFlow name="PostFlow">
+    <Request/>
+    <Response>
+      <Step>
+        <Name>FC-NRInstrumentationObfuscate</Name>
+      </Step>
+    </Response>
+  </PostFlow>
+  <PostClientFlow name="PostClientFlow">
+    <Response>
+      <Step>
+        <Name>FC-NRTraceAPI</Name>
+      </Step>
+      <Step>
+        <Name>FC-NRMetricAPI</Name>
+      </Step>
+      <Step>
+        <Name>FC-NRLogAPI</Name>
+      </Step>
+    </Response>
+  </PostClientFlow>
+  <HTTPProxyConnection>
+    <BasePath>/swapi/trace-and-metric-and-log-obfuscate</BasePath>
+  </HTTPProxyConnection>
+  <RouteRule name="backend">
+    <TargetEndpoint>backend</TargetEndpoint>
+  </RouteRule>
+</ProxyEndpoint>

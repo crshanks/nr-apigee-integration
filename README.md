@@ -13,6 +13,8 @@ Update the [newrelic.properties.sample](newrelic.properties.sample) properties f
 The newrelic.properties file contains the following value:
 * LICENSE_KEY: your New Relic [Ingest License API key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/#license-key)
 
+Set the gcloud project, e.g. `gcloud config set project silicon-shape-123456`
+
 Create, or update a propertyset named `NewRelicPropSet` for your environment using [props-create.sh](props-create.sh), and [props-update.sh](props-update.sh) respectively. Use [props-get.sh](props-get.sh) to verify the property set has been created successfully. Use [props-delete.sh](props-delete.sh) to delete the property set.
 
 ### Maven configuration

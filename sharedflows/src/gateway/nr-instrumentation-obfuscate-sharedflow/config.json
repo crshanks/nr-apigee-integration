@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "name": "test",
+      "policies": [
+        {
+          "name": "JS-NRInstrumentationObfuscate.xml",
+          "tokens": [
+            {
+              "xpath": "/Javascript/Properties/Property[@name='tracesSampler']",
+              "value": "parentbased_always_on"
+            },
+            {
+              "xpath": "/Javascript/Properties/Property[@name='tracesSamplerArg']",
+              "value": 1.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
