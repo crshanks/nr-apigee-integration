@@ -25,7 +25,8 @@
                           "host": "{request.header.host}",
                           "message.status.code": {message.status.code},
                           "organization.name": "{organization.name}",
-                          "service.name": "{apiproxy.name}"
+                          "service.name": "{apiproxy.name}",
+                          "unit": "ms"
                         }
                       }
                       {apigee.target.metric.fragment}
